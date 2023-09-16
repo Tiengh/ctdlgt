@@ -26,18 +26,18 @@ public class Pairs {
 
         Collections.sort(arr);
         while (f1 < arr.size()) {
-             if (arr.get(f1) - arr.get(f0) < k) {
+            if (arr.get(f1) - arr.get(f0) < k) {
                 f1++;
             } else if (arr.get(f1) - arr.get(f0) > k) {
                 f0++;
-                f1=f0+1;
+                f1 = f0 + 1;
 
+            } else {
+                f0++;
+                f1++;
+                d++;
             }
-             else{
-                 f0++;
-                 f1++;
-                 d++;}
-            }
+        }
 
         return d;
     }
